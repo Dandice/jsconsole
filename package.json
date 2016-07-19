@@ -16,6 +16,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "eruda": "^1.0.4",
     "jscs": "^2.11.0",
     "jshint": "^2.9.1",
     "tap": "^5.7.0",

@@ -4,7 +4,16 @@ window.addEventListener('beforeinstallprompt', function(event) {
     return event.preventDefault();
   }
 });
-
+window.onload =  function () {
+        console.log('window.onload');
+        
+        var el = document.createElement('div');
+        
+        document.body.appendChild(el);
+        eruda.init({
+            tool: ['console', 'Network']
+        });   
+};
 (function (window) {
 
 function sortci(a, b) {
@@ -783,7 +792,7 @@ exec.ontouchstart = function () {
 
 exec.onkeyup = function (event) {
   var which = whichKey(event);
-
+  console.log('exec.onkeyup');
   if (enableCC && which != 9 && which != 16) {
     clearTimeout(codeCompleteTimer);
     codeCompleteTimer = setTimeout(function () {
@@ -865,6 +874,7 @@ exec.onkeydown = function (event) {
     removeSuggestion();
     if (event.shiftKey == true || event.metaKey || event.ctrlKey || !wide) {
       var command = exec.textContent || exec.value;
+      console.log("command:" + command);
       if (command.length) post(command);
       return false;
     }
@@ -1011,9 +1021,6 @@ setTimeout(function () {
   window.scrollTo(0, 1);
 }, 500);
 
-setTimeout(function () {
-  document.getElementById('footer').className = 'hidden';
-}, 5000);
 
 getProps('window'); // cache
 
@@ -1028,9 +1035,5 @@ if (document.addEventListener) document.addEventListener('deviceready', function
   cursor.focus();
 }, false);
 
-// if (iOSMobile) {
-//   document.getElementById('footer').style.display = 'none';
-//   alert('hidden');
-// }
 
 })(this);
