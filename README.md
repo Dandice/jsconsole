@@ -1,33 +1,72 @@
-# JS Console
+English | [简体中文](./README_CN.md)
 
-A JavaScript web console, useful for quick experimentation, debugging, presentations (for live coding) and workshops.
+vConsole
+==============================
+[![npm version](https://badge.fury.io/js/vconsole.svg)](https://badge.fury.io/js/vconsole) 
 
-# Features
+A lightweight, extendable front-end developer tool for mobile web page.
 
-- Remote device debugging using "listen" command ([more info](http://jsconsole.com/remote-debugging.html))
-- Resizable font (yep, biggest issue with Firebug in workshops)
-- Autocomplete in WebKit desktop browsers
-- Shift + up/down for bigger console
-- Save history (based on session)
-- Add support for loading in a DOM (YQL - I thank you again)
-- Permalink to individual executions
 
-# Hosting jsconsole yourself
+## Features
 
-This requires that you install [node.js](http://nodejs.org). Once installed, download this project (or clone it using git) and inside the new `jsconsole` directory run:
+- View console logs
+- View network requests
+- Execute JS command manually
+- Custom plugin
 
-    npm install
 
-This will install the dependencies (in particular 1.8.x version of connect.js).
+## Usage
 
-Once installed, run (on port 80):
+Download the [latest release](https://github.com/WechatFE/vConsole/releases/latest). (DO NOT copy `dist/vconsole.min.js` in the dev branch)
 
-    node server.js
+Or, install via npm:
 
-Or to run on a specific port (like 8080):
+```
+npm install vconsole
+```
 
-    node server.js 8080
+Import `dist/vconsole.min.js` to your project:
 
-Then check your own ip address of the machine it's running on (using `ipconfig` for windows or `ifconfig` for mac and linux). Then on the mobile phone, just visit that IP address and port you're running jsconsole on:
+```html
+<script src="path/to/vconsole.min.js"></script>
+<script>
+console.log('Hello world');
+// then tap vConsole button to see the log
+</script>
+```
 
-![jsconsole running locally](http://i.imgur.com/hyRF5.png)
+See [Tutorial](./doc/tutorial.md) for more details.
+
+
+## Preview
+
+![](./example/snapshot/qrcode.png)
+
+[http://wechatfe.github.io/vconsole/demo.html](http://wechatfe.github.io/vconsole/demo.html)
+
+![](./example/snapshot/log_panel.png)
+
+
+## Documentation
+
+vConsole:
+
+ - [Tutorial](./doc/tutorial.md)
+ - [Public Properties & Methods](./doc/public_properties_methods.md)
+ - [Helper Functions](./doc/helper_functions.md)
+
+Plugin:
+
+ - [Plugin: Getting Started](./doc/plugin_getting_started.md)
+ - [Plugin: Building a Plugin](./doc/plugin_building_a_plugin.md)
+ - [Plugin: Event List](./doc/plugin_event_list.md)
+
+
+## Changelog
+
+[CHANGELOG.md](./CHANGELOG.md)
+
+
+## License
+
+The MIT License (http://opensource.org/licenses/MIT)

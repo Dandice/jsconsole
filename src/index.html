@@ -10,9 +10,10 @@
 <link rel="apple-touch-icon" href="/assets/favicon-192.png" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-<link rel="stylesheet" href="/css/console.css" />
+<link rel="stylesheet" href="/src/css/console.css" />
 <script>
   /* jshint browser:true */
+  console.log('ewif');
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/sw.js', { scope: '/' });
   }
@@ -31,8 +32,7 @@
 <div id="console">
   <ul id="output"></ul>
 </div>
-<script src="/js/prettify.packed.js"></script>
-<script src="/js/EventSource.js"></script>
-<script src="/js/console.js"></script>
+<script src="/src/js/prettify.packed.js"></script>
+<script src="/src/js/EventSource.js"></script>
 </body>
 </html>
